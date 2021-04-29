@@ -20,7 +20,7 @@ protected:
 
 };
 
-class Rectangle2   // èíêàïñóëÿöèÿ ñ ïîìîùüþ getter/setter
+class Rectangle2   // инкапсуляция с помощью getter/setter
 {
 private:
     int a = 0;
@@ -47,7 +47,7 @@ void seta(int a)
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Ñòîðîíà ïðÿìîóãîëüíèêà äîëæíà áûòü áîëüøå èëè ðàâíà 0!" << endl;
+                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
             }
         }
 
@@ -71,7 +71,7 @@ void setb(int b)
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Ñòîðîíà ïðÿìîóãîëüíèêà äîëæíà áûòü áîëüøå èëè ðàâíà 0!" << endl;
+                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
             }
         }
 
@@ -88,7 +88,7 @@ protected:
 };
 
 
-class Rectangle3   // èíêàïñóëÿöèÿ ñ ïîìîùüþ ñïåö. ïðîòîêîëîâ äîñòóïà
+class Rectangle3   // инкапсуляция с помощью спец. протоколов
 {
 private:
     int a = 0;
@@ -125,7 +125,7 @@ protected:
 
 };
 
-class AbstractRectangle4   // èíêàïñóëÿöèÿ çà ñ÷¸ò àáñòðàêöèé
+class AbstractRectangle4   // инкапсуляция за счёт абстракций
 {
 private:
 
@@ -166,7 +166,7 @@ void seta(int a) override
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Ñòîðîíà ïðÿìîóãîëüíèêà äîëæíà áûòü áîëüøå èëè ðàâíà 0!" << endl;
+                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
             }
         }
 
@@ -190,7 +190,7 @@ void setb(int b) override
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Ñòîðîíà ïðÿìîóãîëüíèêà äîëæíà áûòü áîëüøå èëè ðàâíà 0!" << endl;
+                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
             }
         }
 
@@ -209,17 +209,17 @@ protected:
 int main()
 {
 
-    Rectangle1* R1 = new Rectangle1(); // áåç èíêàïñóëÿöèè
+    Rectangle1* R1 = new Rectangle1(); // отсутствие инкапсуляции
     R1->a=3;
     R1->b=2;
     R1->CalculateS();
 
-    Rectangle2* R2 = new Rectangle2(); // èíêàïñóëÿöèÿ ñ ïîìîùüþ getter/setter
+    Rectangle2* R2 = new Rectangle2(); // инкапсуляция с помощью getter/setter
     R2->seta(3);
     R2->setb(2);
     R2->CalculateS();
 
-    Rectangle3* R3 = new Rectangle3(); // èíêàïñóëÿöèÿ ñ ïîìîùüþ ñïåö. ïðîòîêîëîâ
+    Rectangle3* R3 = new Rectangle3(); // инкапсуляция с помощью спец. протоколов
     for (int i=0; i<3; ++i)
     {
     R3->inca();
@@ -231,7 +231,7 @@ int main()
     R3->CalculateS();
 
 
-    AbstractRectangle4* R4 = new Rectangle4(); // èíêàïñóëÿöèÿ çà ñ÷¸ò àáñòðàêöèé
+    AbstractRectangle4* R4 = new Rectangle4(); // инкапсуляция за счёт абстракций
     R4->seta(3);
     R4->setb(2);
     R4->CalculateS();
