@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-class Rectangle1   // отсутствие инкапсуляции
+class Rectangle1   // РѕС‚СЃСѓС‚СЃС‚РІРёРµ РёРЅРєР°РїСЃСѓР»СЏС†РёРё
 {
 private:
 
@@ -20,7 +20,7 @@ protected:
 
 };
 
-class Rectangle2   // инкапсуляция с помощью getter/setter
+class Rectangle2   // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г± ГЇГ®Г¬Г®Г№ГјГѕ getter/setter
 {
 private:
     int a = 0;
@@ -47,7 +47,7 @@ void seta(int a)
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
+                cout << "ACHTUNG! Г‘ГІГ®Г°Г®Г­Г  ГЇГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¤Г®Г«Г¦Г­Г  ГЎГ»ГІГј ГЎГ®Г«ГјГёГҐ ГЁГ«ГЁ Г°Г ГўГ­Г  0!" << endl;
             }
         }
 
@@ -71,7 +71,7 @@ void setb(int b)
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
+                cout << "ACHTUNG! Г‘ГІГ®Г°Г®Г­Г  ГЇГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¤Г®Г«Г¦Г­Г  ГЎГ»ГІГј ГЎГ®Г«ГјГёГҐ ГЁГ«ГЁ Г°Г ГўГ­Г  0!" << endl;
             }
         }
 
@@ -88,7 +88,7 @@ protected:
 };
 
 
-class Rectangle3   // инкапсуляция с помощью спец. протоколов доступа
+class Rectangle3   // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г± ГЇГ®Г¬Г®Г№ГјГѕ Г±ГЇГҐГ¶. ГЇГ°Г®ГІГ®ГЄГ®Г«Г®Гў Г¤Г®Г±ГІГіГЇГ 
 {
 private:
     int a = 0;
@@ -125,7 +125,7 @@ protected:
 
 };
 
-class AbstractRectangle4   // инкапсуляция за счёт абстракций
+class AbstractRectangle4   // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г§Г  Г±Г·ВёГІ Г ГЎГ±ГІГ°Г ГЄГ¶ГЁГ©
 {
 private:
 
@@ -166,7 +166,7 @@ void seta(int a) override
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
+                cout << "ACHTUNG! Г‘ГІГ®Г°Г®Г­Г  ГЇГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¤Г®Г«Г¦Г­Г  ГЎГ»ГІГј ГЎГ®Г«ГјГёГҐ ГЁГ«ГЁ Г°Г ГўГ­Г  0!" << endl;
             }
         }
 
@@ -190,7 +190,7 @@ void setb(int b) override
         {
             if (err=1)
             {
-                cout << "ACHTUNG! Сторона прямоугольника должна быть больше или равна 0!" << endl;
+                cout << "ACHTUNG! Г‘ГІГ®Г°Г®Г­Г  ГЇГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄГ  Г¤Г®Г«Г¦Г­Г  ГЎГ»ГІГј ГЎГ®Г«ГјГёГҐ ГЁГ«ГЁ Г°Г ГўГ­Г  0!" << endl;
             }
         }
 
@@ -209,17 +209,17 @@ protected:
 int main()
 {
 
-    Rectangle1* R1 = new Rectangle1(); // без инкапсуляции
+    Rectangle1* R1 = new Rectangle1(); // ГЎГҐГ§ ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГЁ
     R1->a=3;
     R1->b=2;
     R1->CalculateS();
 
-    Rectangle2* R2 = new Rectangle2(); // инкапсуляция с помощью getter/setter
+    Rectangle2* R2 = new Rectangle2(); // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г± ГЇГ®Г¬Г®Г№ГјГѕ getter/setter
     R2->seta(3);
     R2->setb(2);
     R2->CalculateS();
 
-    Rectangle3* R3 = new Rectangle3(); // инкапсуляция с помощью спец. протоколов
+    Rectangle3* R3 = new Rectangle3(); // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г± ГЇГ®Г¬Г®Г№ГјГѕ Г±ГЇГҐГ¶. ГЇГ°Г®ГІГ®ГЄГ®Г«Г®Гў
     for (int i=0; i<3; ++i)
     {
     R3->inca();
@@ -231,7 +231,7 @@ int main()
     R3->CalculateS();
 
 
-    AbstractRectangle4* R4 = new Rectangle4(); // инкапсуляция за счёт абстракций
+    AbstractRectangle4* R4 = new Rectangle4(); // ГЁГ­ГЄГ ГЇГ±ГіГ«ГїГ¶ГЁГї Г§Г  Г±Г·ВёГІ Г ГЎГ±ГІГ°Г ГЄГ¶ГЁГ©
     R4->seta(3);
     R4->setb(2);
     R4->CalculateS();
